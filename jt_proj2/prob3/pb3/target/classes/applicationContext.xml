@@ -1,0 +1,15 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.3.xsd">
+
+    <bean id="dataSource" class="org.apache.commons.dbcp2.BasicDataSource">
+        <property name="url" value="jdbc:mysql://localhost:3306/yourdatabase" />
+        <property name="username" value="root" />
+        <property name="password" value="yourpassword" />
+        <property name="driverClassName" value="com.mysql.cj.jdbc.Driver" />
+    </bean>
+
+    <bean id="carDAO" class="CarDAO">
+        <constructor-arg ref="dataSource" />
+    </bean>
+</beans>

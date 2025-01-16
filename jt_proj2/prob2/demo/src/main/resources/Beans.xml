@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- Bean definitions for Autovehicle, Motorcycle, and Truck -->
+    <bean id="autoVehicle1" class="com.example.demo.Autovehicle">
+        <constructor-arg value="25000" />
+        <constructor-arg value="180" />
+        <constructor-arg value="Ford" />
+        <constructor-arg value="2021" />
+    </bean>
+
+    <bean id="motorcycle1" class="com.example.demo.Motorcycle">
+        <constructor-arg value="12000" />
+        <constructor-arg value="150" />
+        <constructor-arg value="Sport" />
+    </bean>
+
+    <bean id="truck1" class="com.example.demo.Truck">
+        <constructor-arg value="45000" />
+        <constructor-arg value="120" />
+        <constructor-arg value="15" />
+    </bean>
+</beans>
